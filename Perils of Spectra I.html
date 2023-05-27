@@ -1495,13 +1495,13 @@ Hit the back button to return to the place you came from.</tw-passagedata><tw-pa
 Hit the back button to return to the place you came from.</tw-passagedata><tw-passagedata pid="51" name="A00" tags="menu" position="425,1000" size="100,100">Welcome to The Perils of Spectra I.
 
 (if: $ProgressGameStart is true)[[[Start a new game-&gt;A0X]]](else: )[[[Start a new game-&gt;P01]]]
-(link:&quot;Save game&quot;)[
+(if: $ProgressGameStart is true)[(link:&quot;Save game&quot;)[
   (if:(save-game:&quot;Slot A&quot;))[
     Game saved!
   ](else: )[
     Sorry, I couldn&#39;t save your game.
   ]
-]
+]]
 (link-goto: &quot;Resume Game&quot;, $lastPassage)
 
 Disclaimer: This is a fetish-themed choose-your-own-adventure story that features scenarios and imagery that may be erotic, disturbing, or both.  Content includes nudity, sexual themes, non-consenting sexual intercourse, bondage, transformation, and perilous fates.  
